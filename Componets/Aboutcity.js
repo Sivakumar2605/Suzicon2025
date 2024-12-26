@@ -1,0 +1,73 @@
+import React from 'react';
+import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
+
+const AboutCity = () => {
+  return (
+    <ScrollView style={styles.container}>
+      {/* City Image */}
+      <Image
+        source={{
+          uri: 'data:image/jpeg;base64,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',
+        }}
+        style={styles.image}
+      />
+
+      {/* City Description */}
+      <View style={styles.textContainer}>
+        <Text style={styles.heading}>About Vijayawada</Text>
+        <Text style={styles.description}>
+          Vijayawada, often referred to as the "City of Victory," is a bustling city located on the banks of the Krishna River in Andhra Pradesh, India. Known for its vibrant culture, historical significance, and delicious cuisine, Vijayawada is a hub for commerce, education, and tourism.
+        </Text>
+        <Text style={styles.description}>
+          The city is home to many iconic landmarks, including the Prakasam Barrage, the Kanaka Durga Temple perched on Indrakeeladri Hills, and Bhavani Island, a serene getaway in the heart of the Krishna River. Vijayawada also serves as a gateway to the sacred town of Amaravati, renowned for its ancient Buddhist relics and stupas.
+        </Text>
+        <Text style={styles.description}>
+          With its modern infrastructure, Vijayawada is a perfect blend of tradition and progress, making it a must-visit destination for travelers exploring southern India.
+        </Text>
+      </View>
+    </ScrollView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f4f4f4',
+    padding: 15,
+  },
+  image: {
+    width: '100%',
+    height: 200,
+    borderRadius: 15,
+    marginBottom: 20,
+  },
+  textContainer: {
+    backgroundColor: '#ffffff',
+    borderRadius: 15,
+    padding: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 4,
+  },
+  heading: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    marginBottom: 15,
+    color: '#2e86c1',
+    textAlign: 'center',
+    borderBottomWidth: 2,
+    borderBottomColor: '#2e86c1',
+    paddingBottom: 10,
+  },
+  description: {
+    fontSize: 16,
+    lineHeight: 24,
+    color: '#5a5a5a',
+    marginBottom: 15,
+    textAlign: 'justify',
+  },
+});
+
+export default AboutCity;
