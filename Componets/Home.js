@@ -23,10 +23,8 @@ export default function HomeScreen() {
     <View style={styles.container}>
       {/* Banner with Image */}
       <View style={styles.banner}>
-        <Image
-          source={require('../../Demo/assets/suzicon.png')}
-          style={styles.bannerImage}
-        />
+      <Image source={require('../../Suzicon2025/assets/suzicon.png')} style={styles.bannerImage} />
+
       </View>
 
       {/* Icons Section */}
